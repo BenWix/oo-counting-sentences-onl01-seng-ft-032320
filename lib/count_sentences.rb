@@ -15,8 +15,8 @@ class String
   end
 
   def count_sentences
-    sentences = self.split(/[.?!]/)
-    sentences.select!(|i| i.length > 0)
+    old_sentences = self.split(/[.?!]/)
+    sentences = old_sentences.select(|i| i.length > 0)
     binding.pry 
     sentences.length 
   end
